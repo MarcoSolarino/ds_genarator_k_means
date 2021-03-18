@@ -15,10 +15,7 @@ for a in array:
 
 nparray = np.array(array)
 
-with open('dataset.csv', mode='w') as dataset:
-    dataset_writer = csv.writer(dataset, delimiter=",")
-    for j in array:
-        dataset_writer.writerow(j)
+np.savetxt("dataset.csv", nparray, delimiter=",", fmt='%f')
 
 # fig = plt.figure()
 # ax = fig.add_subplot(111, projection='3d')
